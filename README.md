@@ -1,1 +1,1 @@
-# Pill-Buddy
+# Pill Buddy
