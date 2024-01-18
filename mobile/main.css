@@ -16,7 +16,7 @@ li {
 }
 
 .list {
-    list-style: square;
+    list-style: circle;
 }
 
 .light-theme {
