@@ -12,4 +12,10 @@ messages = [{'title': 'Message One',
 def index():
     return render_template('index.html', messages=messages)
 
+
+@app.route('/create/', methods=('GET', 'POST'))
+def create():
+    return render_template('create.html')
+
+# make sure this is the last line in file
 app.run()
