@@ -7,10 +7,10 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '6cddf7756b9c57390fb7630019a7da4bb1ac822ccbcbaba1'
 
 messages = [{'title': 'Instructions',
-             'content': 'Please enter pill information for 3 pills along with '
-                        'the various information listed. If multiple values correspond '
-                        'to an entry, please separate them with a comma. Please enter times '
-                        'in this format: 9:00am'}
+             'content': 'Navigate to the form tab at the top of the page. Please enter '
+                        'pill information for three pills along with the various information '
+                        'listed. If multiple values correspond to an entry, please separate them '
+                        'with a comma. Please enter times in this format: 9:00am. '}
             ]
 
 # returns index template
