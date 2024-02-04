@@ -1,16 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Add a New Message {% endblock %}</h1>
+    <h1>{% block title %} Pill Schedule {% endblock %}</h1>
+    <h2> Pill 1 </h2>
     <form method="post">
-        <label for="title">Title</label>
+        <label for="title">Name:</label>
         <br>
         <input type="text" name="title"
-               placeholder="Message title"
+               placeholder="Pill 1 name"
                value="{{ request.form['title'] }}"></input>
         <br>
 
-        <label for="content">Message Content</label>
+        <label for="content">Pills per dispense:</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="ex: 1"></input>
+        <br>
+        <label for="content">Times of Day:</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="ex: 9:00am"></input>
+        <br>
+        <label for="content">Days of week:</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="ex: Monday"></input>
+
+        <br>
+        <br>
         <br>
         <textarea name="content"
                   placeholder="Message content"
