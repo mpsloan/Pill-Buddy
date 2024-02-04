@@ -21,13 +21,20 @@
         <br>
         <label for="content">Times of Day:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: 9:00am, 5:00pm, etc."></input>
+        <textarea name="content"
+                  placeholder="ex: 9:00am, 5:00pm, etc."
+                  rows="8"
+                  cols="45"
+                  >{{ request.form['content'] }}</textarea>
         <br>
         <label for="content">Days of week:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: Monday, Wednesday, etc."></input>
+        <textarea name="content"
+                  placeholder="Monday, Wednesday, etc."
+                  rows="8"
+                  cols="45"
+                  >{{ request.form['content'] }}</textarea>
+
 
         <h2> Pill 2 </h2>
     <form method="post">
@@ -45,13 +52,19 @@
         <br>
         <label for="content">Times of Day:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: 9:00am, 5:00pm, etc."></input>
+        <textarea name="content"
+                  placeholder="ex: 9:00am, 5:00pm, etc."
+                  rows="8"
+                  cols="45"
+                  >{{ request.form['content'] }}</textarea>
         <br>
         <label for="content">Days of week:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: Monday, Wednesday, etc."></input>
+        <textarea name="content"
+                  placeholder="Monday, Wednesday, etc."
+                  rows="8"
+                  cols="45"
+                  >{{ request.form['content'] }}</textarea>
 
 
         <h2> Pill 3 </h2>
@@ -70,21 +83,18 @@
         <br>
         <label for="content">Times of Day:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: 9:00am, 5:00pm, etc."></input>
+        <textarea name="content"
+                  placeholder="ex: 9:00am, 5:00pm, etc."
+                  rows="8"
+                  cols="45"
+                  >{{ request.form['content'] }}</textarea>
         <br>
         <label for="content">Days of week:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: Monday, Wednesday, etc."></input>
-
-        <br>
-        <br>
-        <br>
         <textarea name="content"
-                  placeholder="Message content"
-                  rows="15"
-                  cols="60"
+                  placeholder="Monday, Wednesday, etc."
+                  rows="8"
+                  cols="45"
                   >{{ request.form['content'] }}</textarea>
         <br>
         <button type="submit">Submit</button>
