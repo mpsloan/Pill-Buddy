@@ -12,11 +12,12 @@ messages = [{'title': 'Message One',
              'content': 'Message Two Content'}
             ]
 
+# returns index template
 @app.route('/')
 def index():
     return render_template('index.html', messages=messages)
 
-
+# error checking for data in title and content fields
 @app.route('/create/', methods=('GET', 'POST'))
 def create():
     if request.method == 'POST':
