@@ -7,99 +7,102 @@
 
     <h2> Pill 1 </h2>
     <form method="post">
-        <label for="title">Name:</label>
+        <label for="1name">Name:</label>
         <br>
-        <input type="text" name="title"
+        <input type="text" name="1name"
                placeholder="Pill 1 name"
-               value="{{ request.form['title'] }}"></input>
+               value="{{ request.form['1name'] }}"></input>
         <br>
 
-        <label for="content">Pills per dispense:</label>
+        <label for="1dispense">Pills per dispense:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: 1"></input>
+        <input type="text" name="1dispense"
+               placeholder="ex: 1"
+               value="{{ request.form['1dispense'] }}"></input>
         <br>
-        <label for="content">Times of Day:</label>
+        <label for="1times">Times of Day:</label>
         <br>
-        <textarea name="content"
+        <textarea name="1times"
                   placeholder="ex: 9:00am, 5:00pm, etc."
                   rows="8"
                   cols="45"
-                  >{{ request.form['content'] }}</textarea>
+                  >{{ request.form['1times'] }}</textarea>
         <br>
-        <label for="content">Days of week:</label>
+        <label for="1days">Days of week:</label>
         <br>
-        <textarea name="content"
+        <textarea name="1days"
                   placeholder="Monday, Wednesday, etc."
                   rows="8"
                   cols="45"
-                  >{{ request.form['content'] }}</textarea>
+                  >{{ request.form['1days'] }}</textarea>
         <br>
 
         <!-- Pill 2 fields -->
 
         <h2> Pill 2 </h2>
     <form method="post">
-        <label for="title">Name:</label>
+        <label for="2name">Name:</label>
         <br>
-        <input type="text" name="title"
+        <input type="text" name="2name"
                placeholder="Pill 1 name"
-               value="{{ request.form['title'] }}"></input>
+               value="{{ request.form['2name'] }}"></input>
         <br>
 
-        <label for="content">Pills per dispense:</label>
+        <label for="2dispense">Pills per dispense:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: 1"></input>
+        <input type="text" name="2dispense"
+               placeholder="ex: 1"
+               value="{{ request.form['2dispense'] }}"></input>
         <br>
-        <label for="content">Times of Day:</label>
+        <label for="2times">Times of Day:</label>
         <br>
-        <textarea name="content"
+        <textarea name="2times"
                   placeholder="ex: 9:00am, 5:00pm, etc."
                   rows="8"
                   cols="45"
-                  >{{ request.form['content'] }}</textarea>
+                  >{{ request.form['2times'] }}</textarea>
         <br>
-        <label for="content">Days of week:</label>
+        <label for="2days">Days of week:</label>
         <br>
-        <textarea name="content"
+        <textarea name="2days"
                   placeholder="Monday, Wednesday, etc."
                   rows="8"
                   cols="45"
-                  >{{ request.form['content'] }}</textarea>
+                  >{{ request.form['2days'] }}</textarea>
         <br>
 
         <!-- Pill 3 fields -->
 
         <h2> Pill 3 </h2>
     <form method="post">
-        <label for="title">Name:</label>
+        <label for="3name">Name:</label>
         <br>
-        <input type="text" name="title"
+        <input type="text" name="3name"
                placeholder="Pill 1 name"
-               value="{{ request.form['title'] }}"></input>
+               value="{{ request.form['3name'] }}"></input>
         <br>
 
-        <label for="content">Pills per dispense:</label>
+        <label for="3dispense">Pills per dispense:</label>
         <br>
-        <input type="text" name="title"
-               placeholder="ex: 1"></input>
+        <input type="text" name="3dispense"
+               placeholder="ex: 1"
+               value="{{ request.form['3dispense'] }}"></input>
         <br>
-        <label for="content">Times of Day:</label>
+        <label for="3times">Times of Day:</label>
         <br>
-        <textarea name="content"
+        <textarea name="3times"
                   placeholder="ex: 9:00am, 5:00pm, etc."
                   rows="8"
                   cols="45"
-                  >{{ request.form['content'] }}</textarea>
+                  >{{ request.form['3times'] }}</textarea>
         <br>
-        <label for="content">Days of week:</label>
+        <label for="3days">Days of week:</label>
         <br>
-        <textarea name="content"
+        <textarea name="3days"
                   placeholder="Monday, Wednesday, etc."
                   rows="8"
                   cols="45"
-                  >{{ request.form['content'] }}</textarea>
+                  >{{ request.form['3days'] }}</textarea>
         <br>
         <button type="submit">Submit</button>
     </form>
