@@ -21,16 +21,25 @@ def index():
 # error checking for data in title and content fields
 @app.route('/create/', methods=('GET', 'POST'))
 def create():
-    if request.method == 'POST':
-        title = request.form['title']
-        content = request.form['content']
 
-        if not title:
-            flash('Title is required!')
-        elif not content:
-            flash('Content is required!')
+    if request.method == 'POST':
+        name = request.form['1name']
+        dispense = request.form['1dispense']
+        times = request.form['1times']
+        days = request.form['1days']
+
+        print(name, dispense, times, days)
+
+        if not name:
+            flash('Name is required!')
+        elif not dispense:
+            flash('Dispense is required!')
+        elif not times:
+            flash('Times is required!')
+        elif not days:
+            flash('Days is required!')
         else:
-            messages.append({'title': title, 'content': content})
+            # messages.append({'title': title, 'content': content})
             return redirect(url_for('index'))
 
     return render_template('create.html')
