@@ -28,8 +28,6 @@ def create():
         times = request.form['1times']
         days = request.form['1days']
 
-        print(name, dispense, times, days)
-
         if not name:
             flash('Name is required!')
         elif not dispense:
