@@ -23,18 +23,18 @@ def index():
 def create():
 
     if request.method == 'POST':
-        name = request.form['1name']
-        dispense = request.form['1dispense']
-        times = request.form['1times']
-        days = request.form['1days']
+        1name = request.form['1name']
+        1dispense = request.form['1dispense']
+        1times = request.form['1times']
+        1days = request.form['1days']
 
-        if not name:
+        if not 1name:
             flash('Name is required!')
-        elif not dispense:
+        elif not 1dispense:
             flash('Dispense is required!')
-        elif not times:
+        elif not 1times:
             flash('Times is required!')
-        elif not days:
+        elif not 1days:
             flash('Days is required!')
         else:
             # messages.append({'title': title, 'content': content})
@@ -43,4 +43,7 @@ def create():
     return render_template('create.html')
 
 # make sure this is the last line in file
+
+
+# git add/commit
 app.run()
