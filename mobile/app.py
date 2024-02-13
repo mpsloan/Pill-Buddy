@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = '6cddf7756b9c57390fb7630019a7da4bb1ac822ccbcbaba1'
 
+# user instructions
 messages = [{'title': 'Instructions',
              'content': 'Navigate to the form tab at the top of the page. Please enter '
                         'pill information for three pills along with the various information '
@@ -23,21 +24,26 @@ def index():
 def create():
 
     if request.method == 'POST':
+
+        # pill 1's fields
         name1 = request.form['1name']
         dispense1 = request.form['1dispense']
         times1 = request.form['1times']
         days1 = request.form['1days']
 
+        # pill 2's fields
         name2 = request.form['2name']
         dispense2 = request.form['2dispense']
         times2 = request.form['2times']
         days2 = request.form['2days']
 
+        # pill 3's fields
         name3 = request.form['3name']
         dispense3 = request.form['3dispense']
         times3 = request.form['3times']
         days3 = request.form['3days']
 
+        # making sure each field on form contains information
         if not name1:
             flash("Pill 1's name is required!")
         elif not dispense1:
