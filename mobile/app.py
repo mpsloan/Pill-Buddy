@@ -25,6 +25,7 @@ def create():
 
     if request.method == 'POST':
 
+        # List to hold form entries
         form_list = []
 
         # pill 1's fields
@@ -91,28 +92,19 @@ def create():
             flash("Pill 3's times are required!")
         elif not days3:
             flash("Pill 3's days are required!")
+
+        # All entries are filled
+        # Write each entry on separate line in log.txt
         else:
-            # messages.append({'title': title, 'content': content})
+            with open('log.txt', 'w') as f:
+                for entry in form_list:
+                    f.write(entry)
+                    f.write('\n')
+
             return redirect(url_for('index'))
-
-        # user_input = request.form['pill_data']
-        # with open('test.txt', 'w') as f:
-        #     f.write(str(user_input))
-
-        f = open('test.txt', 'a')
-        with open('test.txt', 'w') as f:
-            f.write(str(form_list))
-            # for entry in form_list:
-            #     f.write(entry)
 
     return render_template('create.html')
 
-# @app.route('/', methods=['POST'])
-# def write_data():
-#     user_input = request.form['pill_data']
-#     with open('test.txt', 'w') as f:
-#         f.write(str(user_input))
-#     return ('create.html')
 
 # make sure this is the last line in file
 app.run()
