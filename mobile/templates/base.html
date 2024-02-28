@@ -22,10 +22,22 @@
             color: #970020;
             background-color: #ffd5de;
         }
+        @media screen and (min-width: 481px) {
+            .container { background-color: dodgerblue;
+            background-image: radial-gradient(dodgerblue, #171718);
+            }
+        }
+
+        @media screen and (max-width: 481px) {
+            .container { background-color: gold;
+            background-image: radial-gradient(gold, #171718);
+            }
+        }
 
     </style>
 </head>
 <body>
+<section class="container">
     <nav>
         <a href="{{ url_for('index') }}">About</a>
         <a href="{{ url_for('create') }}">Form</a>
@@ -37,5 +49,6 @@
         {% endfor %}
         {% block content %} {% endblock %}
     </div>
+</section>
 </body>
 </html>
