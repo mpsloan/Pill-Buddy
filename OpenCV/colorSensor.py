@@ -21,7 +21,7 @@ def onClick(event, x, y, flags, param):
         print(original[y, x])
 
 
-original = cv2.imread("one.jpg", cv2.IMREAD_COLOR)
+original = cv2.imread("../images/one.jpg", cv2.IMREAD_COLOR)
 
 # use blur with 5x5 mask
 blur = cv2.blur(original, (5, 5), 0)
