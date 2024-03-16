@@ -2,18 +2,26 @@ import cv2
 import numpy as np
 
 # load image and convert it to HSV Color Space
-img = cv2.imread('../images/one.jpg')
-hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+image = cv2.imread('../images/one.jpg')
 
 # Define Color Range
-lower_range = (0, 50, 50)
-upper_range = (10, 255, 255)
-mask = cv2.inRange(hsv_img, lower_range, upper_range)
+# define the list of boundaries
+boundaries = [
+    ([17, 15, 100], [50, 56, 200]),
+    ([86, 31, 4], [220, 88, 50]),
+    ([25, 146, 190], [62, 174, 250]),
+    ([103, 86, 65], [145, 133, 128])
+]
 
-# Apply mask to image
-color_image = cv2.bitwise_and(img, img, mask=mask)
-
-# Display color image
-cv2.imshow('Color Image', color_image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# loop over the boundaries
+for (lower, upper) in boundaries:
+    # create NumPy arrays from the boundaries
+    lower = np.array(lower, dtype="uint8")
+    upper = np.array(upper, dtype="uint8")
+    # find the colors within the specified boundaries and apply
+    # the mask
+    mask = cv2.inRange(image, lower, upper)
+    output = cv2.bitwise_and(image, image, mask=mask)
+    # show the images
+    cv2.imshow("images", np.hstack([image, output]))
+    cv2.waitKey(0)
