@@ -6,6 +6,13 @@ image = cv2.imread('../images/one.jpg')
 
 # Define Color Range
 # define the list of boundaries
+# [blue, green, red]
+# any color whose 200 < r < 255 is red
+# this source just kind of reiterates what I already have
+# https://www.projectpro.io/recipes/detect-specific-colors-from-image-opencv
+
+# possible color detection resource
+# https://pyimagesearch.com/2016/02/15/determining-object-color-with-opencv/
 boundaries = [
     ([17, 15, 100], [50, 56, 200]),
     ([86, 31, 4], [220, 88, 50]),
