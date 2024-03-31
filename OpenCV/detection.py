@@ -23,8 +23,8 @@ else:
     print('No blue')
 
 # YELLOW
-lower_val = np.array([130,100,20])
-upper_val = np.array([130,255,255])
+lower_val = np.array([20,100,20])
+upper_val = np.array([30,255,255])
 
 mask = cv2.inRange(hsv, lower_val, upper_val)
 
