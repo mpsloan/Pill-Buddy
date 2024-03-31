@@ -3,7 +3,7 @@
 import cv2
 import numpy as np
 # load image
-img = cv2.imread("../images/one.jpg")
+img = cv2.imread("../images/two.jpg")
 # Convert to HSV
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
@@ -17,7 +17,7 @@ mask = cv2.inRange(hsv, lower_val, upper_val)
 
 # if there are any white pixels on mask, sum will be > 0
 hasBlue = np.sum(mask)
-if hasBlue > 0:
+if hasBlue > 10000000:
     print('Blue detected!')
 else:
     print('No blue')
@@ -29,7 +29,7 @@ upper_val = np.array([30,255,255])
 mask = cv2.inRange(hsv, lower_val, upper_val)
 
 hasYellow = np.sum(mask)
-if hasYellow > 0:
+if hasYellow > 10000000:
     print('Yellow detected!')
 else:
     print('No yellow')
@@ -41,7 +41,7 @@ upper_val = np.array([12,255,255])
 mask = cv2.inRange(hsv, lower_val, upper_val)
 
 hasRed = np.sum(mask)
-if hasRed > 0:
+if hasRed > 10000000:
     print('Red detected!')
 else:
     print('No red')
