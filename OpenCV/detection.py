@@ -7,6 +7,7 @@ img = cv2.imread("../images/one.jpg")
 # Convert to HSV
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
+# BLUE
 # define range wanted color in HSV
 lower_val = np.array([90,100,20])
 upper_val = np.array([130,255,255])
@@ -20,6 +21,20 @@ if hasBlue > 0:
     print('Blue detected!')
 else:
     print('No blue')
+
+# YELLOW
+lower_val = np.array([130,100,20])
+upper_val = np.array([130,255,255])
+
+mask = cv2.inRange(hsv, lower_val, upper_val)
+
+hasYellow = np.sum(mask)
+if hasYellow > 0:
+    print('Yellow detected!')
+else:
+    print('No yellow')
+
+
 
 # show image
 # apply mask to image
