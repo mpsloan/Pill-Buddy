@@ -35,8 +35,8 @@ else:
     print('No yellow')
 
 # RED
-lower_val = np.array([130,100,20])
-upper_val = np.array([130,255,255])
+lower_val = np.array([0,150,20])
+upper_val = np.array([12,255,255])
 
 mask = cv2.inRange(hsv, lower_val, upper_val)
 
