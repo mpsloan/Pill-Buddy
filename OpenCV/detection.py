@@ -59,3 +59,20 @@ cv2.imshow("Res", fin)
 cv2.imshow("Mask", mask)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+def detect_color(color):
+    # define HSV color range
+    lower_val = np.array([90, 100, 20])
+    upper_val = np.array([130, 255, 255])
+
+    # Threshold the HSV image - any specified color will show up as white
+    mask = cv2.inRange(hsv, lower_val, upper_val)
+
+    # check against large sum of white pixels
+    # because there are small amounts of most colors on most pictures
+    has_color = np.sum(mask)
+    if has_color > 10000000:
+        return True
+    else:
+        return False
