@@ -9,6 +9,7 @@ img = cv2.imread("../images/two.jpg")
 # Convert to HSV
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
+# dictionary to pair the color to their lower and upper hsv ranges
 color_ranges = {
     'blue': [np.array([90, 100, 20]), np.array([130, 255, 255])],
     'red': [np.array([0, 150, 20]), np.array([12, 255, 255])],
@@ -18,7 +19,9 @@ color_ranges = {
     'purple': [np.array([135, 100, 20]), np.array([150, 255, 255])]
     }
 
+# iterate through each color in dictionary
 for i in color_ranges:
+
     # define HSV color range
     lower_val = color_ranges[i][0]
     upper_val = color_ranges[i][1]
@@ -29,17 +32,18 @@ for i in color_ranges:
     # check against large sum of white pixels
     # because there are small amounts of most colors on most pictures
     has_color = np.sum(mask)
+
+    # threshold to meet to ensure large amount of color in this picture
     if has_color > 10000000:
         print("Picture has", i)
     else:
         print("Picture doesn't have", i)
 
-# show image
-# apply mask to image
+# show image and apply mask to image
 res = cv2.bitwise_and(img, img, mask=mask)
 fin = np.hstack((img, res))
 
-# display image
+# display image with and without mask
 cv2.imshow("Res", fin)
 cv2.imshow("Mask", mask)
 cv2.waitKey(0)
