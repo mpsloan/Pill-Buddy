@@ -12,7 +12,10 @@ hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 color_ranges = {
     'blue': [np.array([90, 100, 20]), np.array([130, 255, 255])],
     'red': [np.array([0, 150, 20]), np.array([12, 255, 255])],
-    'yellow': [np.array([20, 100, 20]), np.array([30, 255, 255])]
+    'yellow': [np.array([20, 100, 20]), np.array([30, 255, 255])],
+    'orange': [np.array([10, 200, 20]), np.array([20, 255, 255])],
+    'green': [np.array([35, 100, 20]), np.array([75, 255, 255])],
+    'purple': [np.array([135, 100, 20]), np.array([150, 255, 255])]
     }
 
 for i in color_ranges:
@@ -27,9 +30,9 @@ for i in color_ranges:
     # because there are small amounts of most colors on most pictures
     has_color = np.sum(mask)
     if has_color > 10000000:
-        print("Picture has ", i)
+        print("Picture has", i)
     else:
-        print("Picture doesn't have ", i)
+        print("Picture doesn't have", i)
 
 # show image
 # apply mask to image
