@@ -1,3 +1,4 @@
+#Example from https://gpiozero.readthedocs.io/en/stable/api_output.html#servo
 from gpiozero import Servo
 from time import sleep
 
