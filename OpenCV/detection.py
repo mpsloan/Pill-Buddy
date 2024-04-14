@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 # load image
-img = cv2.imread("../images/two.jpg")
+img = cv2.imread("../images/one.jpg")
 
 # Convert to HSV
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -35,9 +35,7 @@ for i in color_ranges:
 
     # threshold to meet to ensure large amount of color in this picture
     if has_color > 10000000:
-        print("Picture has", i)
-    else:
-        print("Picture doesn't have", i)
+        print(i, "color pill detected.")
 
 # show image and apply mask to image
 res = cv2.bitwise_and(img, img, mask=mask)
